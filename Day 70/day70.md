@@ -44,6 +44,29 @@
   ```
 - `useState` lets us add state to functional components.
 
+### 4. What is `StrictMode`?
+
+- **React.StrictMode** is a tool for highlighting potential problems in an application.
+- It helps developers write safer React code by:
+  - Identifying unsafe lifecycle methods.
+  - Warning about deprecated APIs.
+  - Detecting unexpected side effects.
+- It does **not** render any visible UI and does not affect production builds.
+- In the boilerplate, you will see:
+  ```javascript
+  import React from 'react';
+  import ReactDOM from 'react-dom/client';
+  import App from './App';
+
+  ReactDOM.createRoot(document.getElementById('root')).render(
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  );
+  ```
+- Wrapping `<App />` in `<React.StrictMode>` ensures your code follows best practices and helps catch bugs early.
+
+
 ---
 
 **Summary:**  
