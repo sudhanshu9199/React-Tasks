@@ -1,6 +1,8 @@
 // import React from 'react'
 
 
+
+
 // const App = () => {
 //   // function catched() { // non-parameter
 //   //   alert('You run');
@@ -86,25 +88,81 @@
 // export default App
 
 
+// import { useState } from "react";
+
+// const App = () => {
+//   const [names, setnames] = useState('Sarthak');
+
+//   const ChangeHandler = () => {
+//     setnames('Harsh')
+//     console.log(names);
+//   };
+
+//   return (
+//     <div>
+//       <h1>Username</h1>
+//       <h2>{names}</h2>
+//       <button onClick={ChangeHandler}>Change Name</button>
+//     </div>
+//   )
+// }
+
+// export default App
+
+// Day 72 lecture end
+
+
+// Day 75 Start
+
+// import { useState } from "react";
+// const App = () => {
+//   const [users, setusers] = useState([
+//     {name:'John', age: 12},
+//     {name:'Ramm', age: 58},
+//     {name: 'Ayush', age: 22}
+//   ]);
+
+//   const renderuser = users.map((user, idx) => {
+//     return (
+//       <li key={idx}>{user.name}</li>
+//     )
+//   })
+//   return (
+//     <div>
+//       <ol>{renderuser}</ol>
+//     </div>
+//   )
+// }
+
+// export default App
+
+
+// Two-way binding is only aplicable for form elements.
+
 import { useState } from "react";
+import Create from './components/Create'
+import Read from "./components/Read";
 
 const App = () => {
-  const [names, setnames] = useState('Sarthak');
-
-  const ChangeHandler = () => {
-    setnames('Harsh')
-    console.log(names);
-  };
+  
+  const [users, setusers] = useState([
+    {name:'John', age: 12},
+    {name:'Ramm', age: 58},
+    {name: 'Ayush', age: 22}
+  ]);
 
   return (
     <div>
-      <h1>Username</h1>
-      <h2>{names}</h2>
-      <button onClick={ChangeHandler}>Change Name</button>
+      <Create />
+      <hr />
+      <Read user = {users} setuser = {setusers}/>
     </div>
   )
 }
 
 export default App
 
-// Day 72 lecture end
+
+// prop drilling
+
+// Day 75 end
