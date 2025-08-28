@@ -1,0 +1,9 @@
+/* in this way if we use to set style */
+/* h1 { 
+    color: tomato;
+} */
+
+/* BEM - Block Element Modifier */
+.read_list_heading {
+    color: tomato;
+}

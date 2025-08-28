@@ -1,16 +1,26 @@
 import React, { useState } from "react";
-
+// import './Read.css'; // global css applyed in this way, it is a behaviour of react.
+import style from './Read.module.css'; // simplar as css
 const Read = (props) => {
-
-    const todos = props.todos;
+    console.log(style);
+    
+        const todos = props.todos;
     const settodos = props.settodos;
 
+    let DeleteHandler = (id) => {
+        console.log(id);
+        const filteredTodo = todos.filter((todo) => todo.id !== id);
+        settodos(filteredTodo);
+    }
+
+
+
   const renderTodos = todos.map((todo) => {
-    return <li key={todo.id}>{todo.title}</li>;
+    return <li key={todo.id}>{todo.title} | <span onClick={() => DeleteHandler(todo.id)}>Delete</span></li>;
   });
   return (
     <>
-      <h1>Data Rendering</h1>
+      <h1 className={style.read_list_heading}>Data Rendering</h1>
       <ol>{renderTodos}</ol>
     </>
   );

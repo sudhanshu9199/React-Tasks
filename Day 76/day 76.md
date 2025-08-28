@@ -317,7 +317,5 @@ const renderTodos = todos.map((todo) => (
 - Create a todo app with add and display functionality.
 - Organize code into separate components.
 - Try different styling methods (inline, external, Tailwind).
-<!-- Day 76 react lecture -->
-<!-- the use of 'nanoid'. the use of '...todos' when to use. rendering the data -->
-<!-- put the the different funcanalitys code in the different components. like read, create -->
-<!-- in react two styling in-line styling, internal css how to write these there to use when to use. also external css how to use how to link it, modern css, tailwind css -->
+<!-- Day 77 react lecture -->
+<!-- We learn how to add delete feature using react -->
