@@ -1,4 +1,4 @@
-import React, { useState, createContext } from "react";
+import React, { useState, createContext, useEffect } from "react";
 
 export const recipeContext = createContext(null);
 
@@ -17,6 +17,10 @@ const RecipeContext = (props) => {
       category: 'lunch'
     },
   ]);
+
+  useEffect(() => {
+    setdata(JSON.parse(localStorage.getItem('recipes')) || []);
+  }, []);
   console.log(data);
 
   return (
