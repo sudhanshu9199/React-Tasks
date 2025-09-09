@@ -2,6 +2,8 @@ import { useEffect } from 'react';
 import './index.css';
 import { asyncgetUsers } from './store/userActions.jsx';
 import { useDispatch, useSelector } from 'react-redux';
+import Mainroutes from './routes/Mainroutes.jsx';
+import Nav from '../components/Nav.jsx';
 const App = () => {
   const data = useSelector((state) => state);
   const dispatch = useDispatch();
@@ -10,7 +12,10 @@ const App = () => {
     dispatch(asyncgetUsers());
   }, []);
   return (
-    <div className='text-4xl'>App</div>
+    <div className='text-white bg-black'>
+      <Nav />
+      <Mainroutes />
+    </div>
   )
 }
 

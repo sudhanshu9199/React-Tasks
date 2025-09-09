@@ -1,7 +1,6 @@
 import { nanoid } from 'nanoid';
 import { useForm } from 'react-hook-form';
-import {Link} from 'react-router'
-nanoid
+import {Link} from 'react-router';
 const Register = () => {
     const { register, reset, handleSubmit } = useForm();
 
