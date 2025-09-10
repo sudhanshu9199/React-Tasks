@@ -1,16 +1,19 @@
 import React from 'react'
 import { useForm } from 'react-hook-form';
 import {Link} from 'react-router'
+import { asyncLoginUser } from '../src/store/actions/UserActions';
+import { useDispatch } from 'react-redux';
 const Login = () => {
     const { register, reset, handleSubmit } = useForm();
 
+    const dispatch = useDispatch();
     const LoginHandler = (user) => {
         console.log('here users:',user);
+        dispatch(asyncLoginUser(user));
         reset();
     }
   return (
     <form onSubmit={handleSubmit(LoginHandler)} className='flex flex-col w-1/2'>
-        <input {...register('username')} className='mb-3 outline-0 border-0 border-b p-2 text-4xl' type="text" placeholder='John-Doe'/>
         <input {...register('email')} className='mb-3 outline-0 border-0 border-b p-2 text-4xl' type="email" placeholder='Jhone@abc.mail'/>
         <input {...register('password')} className='mb-3 outline-0 border-0 border-b p-2 text-4xl' type="password" placeholder='******'/>
 
