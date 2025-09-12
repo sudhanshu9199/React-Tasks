@@ -4,13 +4,21 @@
       "id": "0",
       "title": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 laptops",
       "price": 109.5,
-      "description": "Your perfect pack for everyday use and walks in the orest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+      "desc": "Your perfect pack for everyday use and walks in the orest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
       "category": "men's clothing",
-      "image": "http://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+      "image": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRJNCDCoXBYHjfgVbNmxrrQv_Pi6sgkC7jbKw03iRgM6SX-JXo3-30DbKjOAk8Zvfl1jfuo7_dSGaEDr3DtusUIWIk3PqSPLzFqC4APMhKgTBW9_LMQqen-",
       "rating": {
         "rate": 3.9,
         "count": 120
       }
+    },
+    {
+      "id": "4zArqpJiND8_aQebbjY5P",
+      "image": "https://m.media-amazon.com/images/I/71d2nwxv-1L._SX522_.jpg",
+      "title": "Bath Brushes",
+      "price": "199",
+      "desc": "Wazdorf Silicone Body Back Scrubber, Double Side Bathing Brush for Skin Deep Cleaning Massage, Dead Skin Removal Exfoliating Belt for Shower, Body Brush for Bathing (Medium)",
+      "category": "Bathing Accessories"
     }
   ],
   "users": [
@@ -20,6 +28,13 @@
       "email": "admin@email.com",
       "password": "123456",
       "isAdmin": true
+    },
+    {
+      "id": "br_4EH8SEV65tX6ZFaRyR",
+      "username": "sudh",
+      "email": "sudh@email.com",
+      "password": "123456",
+      "isAdmin": false
     }
   ],
   "carts": []
