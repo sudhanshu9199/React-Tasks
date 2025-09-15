@@ -19,7 +19,7 @@ const Nav = () => {
         <>
           <NavLink to="/admin/create-product">Create Products</NavLink>
           <NavLink to="/admin/update-product/:id">Update Products</NavLink>
-          <NavLink to="/admin/delete-product/:id">Delete Products</NavLink>
+          <NavLink to="/admin/user-profile">Profile</NavLink>
           <button onClick={LogoutHandler}>Logout</button>
         </>
       ) : (

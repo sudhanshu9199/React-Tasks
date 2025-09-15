@@ -1,8 +1,9 @@
 import { useForm } from 'react-hook-form';
-import {Link} from 'react-router'
+import {Link, useNavigate} from 'react-router'
 import { asyncLoginUser } from '../src/store/actions/UserActions';
 import { useDispatch } from 'react-redux';
 const Login = () => {
+  const navigator = useNavigate();
     const { register, reset, handleSubmit } = useForm();
 
     const dispatch = useDispatch();
@@ -10,6 +11,7 @@ const Login = () => {
         console.log('here users:',user);
         dispatch(asyncLoginUser(user));
         reset();
+        navigator('/products');
     }
   return (
     <form onSubmit={handleSubmit(LoginHandler)} className='flex flex-col w-1/2'>
