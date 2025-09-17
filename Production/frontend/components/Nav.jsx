@@ -17,9 +17,12 @@ const Nav = () => {
 
       {user ? (
         <>
-          <NavLink to="/admin/create-product">Create Products</NavLink>
+          {user && user.isAdmin && (
+            <NavLink to="/admin/create-product">Create Products</NavLink>
+          )}
           <NavLink to="/admin/update-product/:id">Update Products</NavLink>
           <NavLink to="/admin/user-profile">Profile</NavLink>
+          <NavLink to="/cart">Cart</NavLink>
           <button onClick={LogoutHandler}>Logout</button>
         </>
       ) : (

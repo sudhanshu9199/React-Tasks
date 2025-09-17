@@ -8,6 +8,7 @@ import ProductDetails from "../../pages/product/ProductDetails";
 import UserProfile from "../../pages/user/UserProfile";
 import PagenotFound from "../../pages/PagenotFound";
 import AuthWrapper from "./AuthWrapper";
+import Cart from "../../pages/Cart";
 
 const Mainroutes = () => {
   return (
@@ -27,6 +28,15 @@ const Mainroutes = () => {
         }
       />
       <Route path="/admin/user-profile" element={<AuthWrapper><UserProfile /></AuthWrapper>} />
+
+      <Route
+        path="/cart"
+        element={
+          <AuthWrapper>
+            <Cart />
+          </AuthWrapper>
+        }
+      />
 
       <Route path="*" element={<PagenotFound />} />
     </Routes>

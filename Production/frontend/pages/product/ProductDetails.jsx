@@ -43,7 +43,7 @@ const ProductDetails = () => {
           <h1>{product.title}</h1>
           <p>{product.desc}</p>
           <p>{product.price} rs.</p>
-          <button>Add to cart</button>
+          <button className="bg-blue-800 px-5 py-2 mt-5 active:scale-90">Add to cart</button>
         </div>
       </div>
 

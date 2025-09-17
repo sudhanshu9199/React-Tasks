@@ -10,6 +10,7 @@ const Register = () => {
     const RegisterHandler = (user) => {
         user.id = nanoid();
         user.isAdmin = false;
+        user.cart = [];
         console.log('here users:',user);
         dispatch(asyncRegisterUser(user));
         reset();

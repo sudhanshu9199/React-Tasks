@@ -27,15 +27,16 @@
       "username": "admin",
       "email": "admin@email.com",
       "password": "123456",
-      "isAdmin": true
+      "isAdmin": true,
+      "cart": []
     },
     {
       "id": "8xK_TihrdboNOsgOtSHY1",
       "username": "sudh",
       "email": "sudh@email.com",
       "password": "123456",
-      "isAdmin": false
+      "isAdmin": false,
+      "cart": []
     }
-  ],
-  "carts": []
+  ]
 }

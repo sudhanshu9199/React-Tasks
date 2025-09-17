@@ -1,10 +1,29 @@
 import React from 'react'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import {Link} from 'react-router';
+import { asyncUpdateUser } from '../src/store/actions/UserActions';
 
 const Products = () => {
-  const products = useSelector((state) => state.productsReducer.products);
-  console.log(products);
+  const dispatch = useDispatch();
+  const {
+    userReducer: { users },
+    productsReducer: { products }
+  } = useSelector((state) => state);
+
+  const AddToCartHandler = (products) => {
+    const copyUser = { ...users, cart: [...users.cart] };
+    const x = copyUser.cart.findIndex( c => c?.products?.id == products.id);
+    if (x == -1) {
+      copyUser.cart.push({ products, quantity: 1 });
+    }
+    else {
+      copyUser.cart[x] = {
+        products,
+        quantity: copyUser.cart[x].quantity + 1,
+      };
+    }
+    dispatch(asyncUpdateUser(copyUser.id, copyUser))
+  };
 
   const renderProduct = products.map((products) => {
     return (
@@ -14,9 +33,9 @@ const Products = () => {
         <p>{products.desc.slice(0, 100)}...</p>
         <div>
           <p>{products.price} rs.</p>
-          <button>Add to cart</button>
+          <button onClick={() => AddToCartHandler(products)}>Add to cart</button>
         </div>
-        <Link to={`/product/${products.id}`}>More Info</Link>
+        <Link to={`/product/${products.id}`} className='bg-amber-800 '>More Info</Link>
       </div>
     )
   })
