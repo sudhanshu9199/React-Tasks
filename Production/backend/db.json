@@ -19,6 +19,62 @@
       "price": "297",
       "desc": "Wazdorf Silicone Body Back Scrubber, Double Side Bathing Brush for Skin Deep Cleaning Massage, Dead Skin Removal Exfoliating Belt for Shower, Body Brush for Bathing (Medium)",
       "category": "Bathing Accessories"
+    },
+    {
+      "id": "4zArqpJiND8_bQebbjY5P",
+      "image": "https://m.media-amazon.com/images/I/614zIYp6WuL._SY741_.jpg",
+      "title": "Button-Down Shirts",
+      "price": "297",
+      "desc": "SheWill Women’s Orange Landscape Print Crepe Shirt – Stylish Western Long Shirt with Spread Collar| Shirt for Women Stylish Western | Long Shirt for Women",
+      "category": "Bathing Accessories"
+    },
+    {
+      "id": "4zArqpJiND8_cQebbjY5P",
+      "image": "https://m.media-amazon.com/images/I/41a6IFRLGoL._SY300_SX300_QL70_FMwebp_.jpg",
+      "title": "Premium Chicken",
+      "price": "297",
+      "desc": "FreshToHome Premium Chicken Thigh Boneless | 480g to 500g Pack | Skinless | Antibiotic-residue-free | Tender | Fresh | Never Frozen",
+      "category": "Bathing Accessories"
+    },
+    {
+      "id": "4zArqpJiND8_cWebbjY5P",
+      "image": "https://m.media-amazon.com/images/I/4117LFVOszL._SX300_SY300_QL70_FMwebp_.jpg",
+      "title": "Apple Cider",
+      "price": "297",
+      "desc": "WOW Life Science Apple Cider Vinegar 750ml | Organic Himalayan Apples | Mother of Vinegar with Probiotics | Unfiltered & Unpasteurized | For Weight Management, Reduced Bloating, Healthy Skin & Hair",
+      "category": "Bathing Accessories"
+    },
+    {
+      "id": "4zArqpJiND8_dQebbjY5P",
+      "image": "https://m.media-amazon.com/images/I/61U3mvWM0XL._SY695_.jpg",
+      "title": "Flip-Flops & Slippers",
+      "price": "375",
+      "desc": "DOCTOR EXTRA SOFT Care Diabetic Orthopedic Pregnancy Flat Super Comfort Dr Flipflops and House Slippers For Women's and Girl's",
+      "category": "Bathing Accessories"
+    },
+    {
+      "id": "4zArqpJiND8_eQebbjY5P",
+      "image": "https://m.media-amazon.com/images/I/51kAgKzy79L._SX300_SY300_QL70_FMwebp_.jpg",
+      "title": "Desks",
+      "price": "375",
+      "desc": "Shree Mahadeep Enterprise Study Table Bed Table Premium Laptop Table/Foldable and Portable Wooden/Writing Desk for Office/Home/School (Wood US Cotted)",
+      "category": "Bathing Accessories"
+    },
+    {
+      "id": "4zArqpJiND8_fQebbjY5P",
+      "image": "https://m.media-amazon.com/images/I/71+BHZqaA3L._SX679_.jpg",
+      "title": "Casual Backpacks",
+      "price": "679",
+      "desc": "Skybags Pixie 36 Liters Casual Backpack for Girls With Quick Access Zippered Front Pocket | Soft Touch Fabric, 3 Compartments, Stylish Design | Trendy Backpack",
+      "category": "Bathing Accessories"
+    },
+    {
+      "id": "4zArqpJiND8_gQebbjY5P",
+      "image": "https://m.media-amazon.com/images/I/A1494p2fOCL._SY741_.jpg",
+      "title": "Drress",
+      "price": "1679",
+      "desc": "Miss Chase Women's Multicolored-Base-Blue V-Neck Pleated Puff Sleeve Floral Wrap Midi Polyester Dress",
+      "category": "Bathing Accessories"
     }
   ],
   "users": [
@@ -28,7 +84,30 @@
       "email": "admin@email.com",
       "password": "123456",
       "isAdmin": true,
-      "cart": []
+      "cart": [
+        {
+          "products": {
+            "id": "4zArqpJiND8_aQebbjY5P",
+            "image": "https://m.media-amazon.com/images/I/71d2nwxv-1L._SX522_.jpg",
+            "title": "Bath Brushes",
+            "price": "297",
+            "desc": "Wazdorf Silicone Body Back Scrubber, Double Side Bathing Brush for Skin Deep Cleaning Massage, Dead Skin Removal Exfoliating Belt for Shower, Body Brush for Bathing (Medium)",
+            "category": "Bathing Accessories"
+          },
+          "quantity": 3
+        },
+        {
+          "products": {
+            "id": "4zArqpJiND8_cWebbjY5P",
+            "image": "https://m.media-amazon.com/images/I/4117LFVOszL._SX300_SY300_QL70_FMwebp_.jpg",
+            "title": "Apple Cider",
+            "price": "297",
+            "desc": "WOW Life Science Apple Cider Vinegar 750ml | Organic Himalayan Apples | Mother of Vinegar with Probiotics | Unfiltered & Unpasteurized | For Weight Management, Reduced Bloating, Healthy Skin & Hair",
+            "category": "Bathing Accessories"
+          },
+          "quantity": 1
+        }
+      ]
     },
     {
       "id": "8xK_TihrdboNOsgOtSHY1",
