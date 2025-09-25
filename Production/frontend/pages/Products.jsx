@@ -1,38 +1,24 @@
 import React, { Suspense, useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router";
-import { asyncUpdateUser } from "../src/store/actions/UserActions";
 import axios from "../src/api/axiosConfig";
+
+import { asyncUpdateUser } from "../src/store/actions/UserActions";
 import InfiniteScroll from "react-infinite-scroll-component";
+import useInfiniteProducts from "../src/utils/useInfiniteProducts";
 const Products = () => {
+  const {products, hasMore, fetchProducts} = useInfiniteProducts()
   const dispatch = useDispatch();
   // const {
   //   userReducer: { users },
   //   productsReducer: { products }
   // } = useSelector((state) => state);
   const users = useSelector((state) => state.userReducer.users);
-  const [products, setProducts] = useState([]);
-  const [hasMore, sethasMore] = useState(true);
 
-  const fetchProducts = async () => {
-    try {
-      const { data } = await axios.get(
-        `/products?_limit=6&_start=${products.length}`
-      );
-      if (data.length == 0) {
-        sethasMore(false);
-      } else {
-        sethasMore(true);
-        setProducts([...products, ...data]);
-      }
-    } catch (error) {
-      console.log(error);
-    }
-  };
 
-  useEffect(() => {
-    fetchProducts();
-  }, []);
+
+
+
 
   const AddToCartHandler = (products) => {
     const copyUser = { ...users, cart: [...users.cart] };
