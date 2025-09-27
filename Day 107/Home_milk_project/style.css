@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(90deg, rgb(182, 199, 204) 0%, rgb(161, 179, 183) 50%, rgb(205, 216, 218) 100%);
+  animation: bgShift 6s infinite alternate ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+@keyframes bgShift {
+  0% {
+    background: linear-gradient(90deg, rgb(182, 199, 204) 0%, rgb(161, 179, 183) 50%, rgb(205, 216, 218) 100%);
+  }
+  100% {
+    background: linear-gradient(90deg, rgb(182, 199, 204) 0%, rgb(160, 180, 184) 50%, rgb(205, 216, 218) 100%);
+  }
+}
+nav {
+  display: flex;
+  justify-content: space-around;
+  padding: 3rem 0;
+  font-family: "Nanum Myeongjo", serif;
+  font-size: 1.5rem;
+  align-items: center;
+  color: #356396;
+  z-index: 2;
+}
+nav .ops {
+  display: flex;
+  gap: 5rem;
+  font-size: 1.2rem;
+}
+nav .ops p {
+  cursor: pointer;
+}
+nav .cart {
+  background: #356396;
+  padding: 0.3rem 2rem;
+  border: 0.5rem solid #d8e8ee;
+  border-radius: 40px;
+  filter: drop-shadow(2px 4px 5px rgba(17, 17, 17, 0.4862745098));
+  cursor: pointer;
+}
+nav .cart i {
+  color: white;
+  font-size: 1.3rem;
+}
+nav .cart:active {
+  transform: scale(0.95);
+}
+
+.bgText {
+  margin: auto;
+  width: 100%;
+  font-weight: 800;
+  line-height: 0.73;
+}
+.bgText h1 {
+  font-family: "Archivo Black", sans-serif;
+  color: white;
+}
+.bgText h1:nth-child(1) {
+  font-size: 20rem;
+}
+.bgText h1:nth-last-child(1) {
+  font-size: 22rem;
+}
+
+.coconutTwoPieces {
+  position: absolute;
+  top: 50%;
+  left: 33%;
+  transform: translate(-50%, -50%);
+  width: 33rem;
+}
+
+.milkBottle {
+  position: absolute;
+  top: 52%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 23rem;
+  z-index: 2;
+}
+
+.milkBottle2 {
+  position: absolute;
+  top: 82%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  width: 28rem;
+  z-index: 0;
+}
+
+.coconutPiece {
+  position: absolute;
+  top: 75%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+  width: 23rem;
+  transform: scaleX(-1);
+}/*# sourceMappingURL=style.css.map */
