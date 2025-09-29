@@ -25,6 +25,21 @@ nav {
     p {
       cursor: pointer;
     }
+    // Ai
+    .logo {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    .ops p {
+      opacity: 0;
+      transform: translateY(-6px);
+      display: inline-block;
+      margin: 0 0.8rem;
+    }
+    .login {
+      opacity: 0;
+      transform: scale(0.95);
+    }
   }
 
   .login {
@@ -52,6 +67,14 @@ nav {
     font-size: 10rem;
     font-weight: 800;
     text-align: center;
+
+    // ai
+    -webkit-clip-path: inset(0 0 100% 0);
+    clip-path: inset(0 0 100% 0);
+    opacity: 1; /* visible but masked */
+    display: inline-block;
+    transform-origin: center;
+    will-change: clip-path, transform;
   }
 
   .belowText {
@@ -65,8 +88,15 @@ nav {
       font-size: 4rem;
     }
 
+    .char {
+      display: inline-block;
+      transform: translateY(6px);
+      opacity: 0;
+      will-change: transform, opacity;
+    }
+
     .btnLike {
-      display: flex;
+      display: inline-flex;
       align-items: center;
       gap: 2rem;
       background: #000;
@@ -74,6 +104,8 @@ nav {
       color: white;
       border-radius: 1.5rem;
       overflow: hidden;
+      transform: translateY(6px) scale(0.98);
+      opacity: 0;
 
       .pen {
         background: white;
@@ -86,6 +118,7 @@ nav {
         font-size: 1.8rem;
         border-radius: 50%;
         cursor: pointer;
+        transform-origin: center;
 
         &:active {
           transform: scale(0.95);
@@ -102,7 +135,8 @@ nav {
     }
   }
 
-  .model1, .model2 {
+  .model1,
+  .model2 {
     position: absolute;
     width: 7.22rem;
     height: 7.22rem;
@@ -118,12 +152,11 @@ nav {
   .model2 {
     right: 24.55%;
     top: 13.18%;
-
   }
 }
 
 .headerModel {
-  width: 100%;
+  width: 98.52%;
   position: relative;
   height: 70vh;
 
@@ -131,14 +164,19 @@ nav {
     width: 100%;
     position: absolute;
     bottom: 0;
+    opacity: 0;
+    transform: translateY(40px) scale(1.03);
+    will-change: transform, opacity;
   }
-  .headerModel {
+  .headModel {
     width: 35rem;
     height: auto;
     position: absolute;
     left: 50%;
     top: -23.3%;
-    transform: translate(-50%);
+    transform: translate(-120%);
+    opacity: 0;
+    will-change: transform, opacity;
   }
 }
 
@@ -147,6 +185,9 @@ nav {
   padding: 3rem 3.5rem;
   display: flex;
   justify-content: space-between;
+  opacity: 0; // hidden before scroll
+  transform: translateY(50px);
+  will-change: transform, opacity;
 
   .left {
     // width: 50%;
@@ -154,6 +195,8 @@ nav {
       font-size: 2rem;
       font-family: "Barlow", sans-serif;
       font-weight: 600;
+      opacity: 0;
+      transform: translateY(20px);
     }
 
     .apps {
@@ -163,6 +206,9 @@ nav {
       align-items: center;
       .app {
         text-align: center;
+        opacity: 0;
+        transform: scale(0.5) rotate(-10deg);
+        will-change: transform, opacity;
         img {
           width: 4rem;
           height: 4rem;
@@ -213,6 +259,8 @@ nav {
       img {
         width: 15rem;
         object-fit: cover;
+        opacity: 0;
+        transform: translateX(-60px) skewX(5deg);
       }
       .clientsFeel {
         p:nth-child(1) {
@@ -239,6 +287,12 @@ nav {
     font-weight: 800;
     font-size: 3.5rem;
     width: 49%;
+    // ai
+    -webkit-clip-path: inset(0 0 100% 0);
+    clip-path: inset(0 0 100% 0);
+    opacity: 1;
+    transform-origin: center;
+    will-change: clip-path, transform;
   }
 
   .belows {
@@ -246,21 +300,54 @@ nav {
     gap: 3rem;
     img {
       width: 30rem;
+      opacity: 0;
+      transform: translateX(-80px) scale(0.95);
+      will-change: transform, opacity;
+      transition: transform 0.4s ease, filter 0.4s ease, box-shadow 0.4s ease;
+      cursor: pointer;
+      will-change: transform, filter, box-shadow;
+
+      &:hover {
+        transform: scale(1.08) rotate3d(1, 1, 0, 6deg);
+        filter: brightness(1.15) saturate(1.2);
+        box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4),
+                    0 0 30px rgba(255, 230, 80, 0.6);
+      }
     }
     .rightTexts {
       margin-top: 2rem;
+      opacity: 0;
+      transform: translateY(40px);
+      will-change: transform, opacity;
       p {
         font-size: 1.3rem;
         margin-bottom: 2.5rem;
       }
-      h2 {
-        width: 70%;
+      h3 {
+        font-family: "Roboto", sans-serif;
+        text-transform: uppercase;
+        font-weight: 800;
+        width: 74%;
         font-size: 4rem;
+        word-break: break-word;
+        -webkit-clip-path: inset(0 0 100% 0);
+        clip-path: inset(0 0 100% 0);
+        opacity: 1;
+
+
+         .char {
+      display: inline-block;
+      opacity: 0;
+      transform: translateY(40px);
+      will-change: transform, opacity;
+    }
       }
       .desc {
         margin-top: 1.5rem;
         font-family: "Barlow", sans-serif;
         width: 70%;
+                opacity: 0;
+        transform: translateY(20px);
       }
 
       .btnLike {
@@ -268,6 +355,8 @@ nav {
         flex-direction: row;
         align-items: center;
         gap: 1rem;
+                opacity: 0;
+        transform: translateY(15px) scale(0.95);
 
         i {
           background: yellow;
@@ -276,11 +365,15 @@ nav {
           border-radius: 50%;
           margin-top: -3.2%;
           cursor: pointer;
+          transform: rotate(-20deg) scale(0.8);
+          opacity: 0;
         }
         .btnText {
           font-family: "Barlow", sans-serif;
           font-weight: 500;
           font-size: 1.5rem;
+          opacity: 0;
+          transform: translateX(20px);
         }
       }
     }
@@ -297,6 +390,8 @@ nav {
       font-size: 4rem;
       font-weight: 800;
       text-transform: uppercase;
+      opacity: 0; // hidden initially
+      transform: translateY(30px);
     }
     h2:nth-child(2) {
       margin-left: 10rem;
@@ -311,6 +406,21 @@ nav {
       font-family: "Roboto", sans-serif;
       font-weight: 700;
       font-size: 2rem;
+            opacity: 0; // animate in
+      transform: translateY(20px);
+    }
+
+    img {
+        opacity: 0; // hidden for gsap
+      transform: scale(0.9);
+      transition: transform 0.4s ease, filter 0.4s ease;
+      cursor: pointer;
+
+      &:hover {
+        transform: scale(1.08) rotate(1deg);
+        filter: brightness(1.1) saturate(1.2);
+        z-index: 5;
+      }
     }
 
     img:nth-of-type(1) {
@@ -521,26 +631,26 @@ nav {
 }
 
 .section7 {
-    padding: 2rem 17rem 10rem 17rem;
-    display: flex;
-    gap: 8rem;
+  padding: 2rem 17rem 10rem 17rem;
+  display: flex;
+  gap: 8rem;
 
-    .left {
-        h2 {
-            font-family: "Oswald", sans-serif;
-            font-weight: 800;
-            font-size: 5rem;
-            text-transform: uppercase;
-            line-height: 1.2;
-        }
+  .left {
+    h2 {
+      font-family: "Oswald", sans-serif;
+      font-weight: 800;
+      font-size: 5rem;
+      text-transform: uppercase;
+      line-height: 1.2;
     }
-    .right {
-        p {
-            font-family: "Nunito Sans", sans-serif;
-            font-size: 1.5rem;
-            text-align: end;
-        }
+  }
+  .right {
+    p {
+      font-family: "Nunito Sans", sans-serif;
+      font-size: 1.5rem;
+      text-align: end;
     }
+  }
 }
 
 footer {
@@ -579,14 +689,21 @@ footer {
 
   .social {
     a {
-        text-decoration: none;
-        color: white;
+      text-decoration: none;
+      color: white;
     }
     .icons {
-        font-size: 1.7rem;
-        margin-bottom: 0.8rem;
-        display: flex;
-        gap: 1.5rem;
+      font-size: 1.7rem;
+      margin-bottom: 0.8rem;
+      display: flex;
+      gap: 1.5rem;
     }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
   }
 }

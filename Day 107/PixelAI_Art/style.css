@@ -26,6 +26,20 @@ nav .ops {
 nav .ops p {
   cursor: pointer;
 }
+nav .ops .logo {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+nav .ops .ops p {
+  opacity: 0;
+  transform: translateY(-6px);
+  display: inline-block;
+  margin: 0 0.8rem;
+}
+nav .ops .login {
+  opacity: 0;
+  transform: scale(0.95);
+}
 nav .login {
   cursor: pointer;
   background: #000;
@@ -50,6 +64,11 @@ nav .login:active {
   font-size: 10rem;
   font-weight: 800;
   text-align: center;
+  clip-path: inset(0 0 100% 0);
+  opacity: 1; /* visible but masked */
+  display: inline-block;
+  transform-origin: center;
+  will-change: clip-path, transform;
 }
 .topHeader .belowText {
   width: 73%;
@@ -61,8 +80,14 @@ nav .login:active {
   text-transform: uppercase;
   font-size: 4rem;
 }
+.topHeader .belowText .char {
+  display: inline-block;
+  transform: translateY(6px);
+  opacity: 0;
+  will-change: transform, opacity;
+}
 .topHeader .belowText .btnLike {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 2rem;
   background: #000;
@@ -70,6 +95,8 @@ nav .login:active {
   color: white;
   border-radius: 1.5rem;
   overflow: hidden;
+  transform: translateY(6px) scale(0.98);
+  opacity: 0;
 }
 .topHeader .belowText .btnLike .pen {
   background: white;
@@ -82,6 +109,7 @@ nav .login:active {
   font-size: 1.8rem;
   border-radius: 50%;
   cursor: pointer;
+  transform-origin: center;
 }
 .topHeader .belowText .btnLike .pen:active {
   transform: scale(0.95);
@@ -93,7 +121,8 @@ nav .login:active {
   border-radius: 1.5rem;
   font-size: 1.2rem;
 }
-.topHeader .model1, .topHeader .model2 {
+.topHeader .model1,
+.topHeader .model2 {
   position: absolute;
   width: 7.22rem;
   height: 7.22rem;
@@ -112,7 +141,7 @@ nav .login:active {
 }
 
 .headerModel {
-  width: 100%;
+  width: 98.52%;
   position: relative;
   height: 70vh;
 }
@@ -120,14 +149,19 @@ nav .login:active {
   width: 100%;
   position: absolute;
   bottom: 0;
+  opacity: 0;
+  transform: translateY(40px) scale(1.03);
+  will-change: transform, opacity;
 }
-.headerModel .headerModel {
+.headerModel .headModel {
   width: 35rem;
   height: auto;
   position: absolute;
   left: 50%;
   top: -23.3%;
-  transform: translate(-50%);
+  transform: translate(-120%);
+  opacity: 0;
+  will-change: transform, opacity;
 }
 
 .section2 {
@@ -135,11 +169,16 @@ nav .login:active {
   padding: 3rem 3.5rem;
   display: flex;
   justify-content: space-between;
+  opacity: 0;
+  transform: translateY(50px);
+  will-change: transform, opacity;
 }
 .section2 .left p {
   font-size: 2rem;
   font-family: "Barlow", sans-serif;
   font-weight: 600;
+  opacity: 0;
+  transform: translateY(20px);
 }
 .section2 .left .apps {
   margin-top: 3rem;
@@ -149,6 +188,9 @@ nav .login:active {
 }
 .section2 .left .apps .app {
   text-align: center;
+  opacity: 0;
+  transform: scale(0.5) rotate(-10deg);
+  will-change: transform, opacity;
 }
 .section2 .left .apps .app img {
   width: 4rem;
@@ -196,6 +238,8 @@ nav .login:active {
   width: 15rem;
   -o-object-fit: cover;
      object-fit: cover;
+  opacity: 0;
+  transform: translateX(-60px) skewX(5deg);
 }
 .section2 .right .belowClients .clientsFeel p:nth-child(1) {
   min-width: 0.2rem;
@@ -217,6 +261,10 @@ nav .login:active {
   font-weight: 800;
   font-size: 3.5rem;
   width: 49%;
+  clip-path: inset(0 0 100% 0);
+  opacity: 1;
+  transform-origin: center;
+  will-change: clip-path, transform;
 }
 .section3 .belows {
   display: flex;
@@ -224,28 +272,58 @@ nav .login:active {
 }
 .section3 .belows img {
   width: 30rem;
+  opacity: 0;
+  transform: translateX(-80px) scale(0.95);
+  will-change: transform, opacity;
+  transition: transform 0.4s ease, filter 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+  will-change: transform, filter, box-shadow;
+}
+.section3 .belows img:hover {
+  transform: scale(1.08) rotate3d(1, 1, 0, 6deg);
+  filter: brightness(1.15) saturate(1.2);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4), 0 0 30px rgba(255, 230, 80, 0.6);
 }
 .section3 .belows .rightTexts {
   margin-top: 2rem;
+  opacity: 0;
+  transform: translateY(40px);
+  will-change: transform, opacity;
 }
 .section3 .belows .rightTexts p {
   font-size: 1.3rem;
   margin-bottom: 2.5rem;
 }
-.section3 .belows .rightTexts h2 {
-  width: 70%;
+.section3 .belows .rightTexts h3 {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  font-weight: 800;
+  width: 74%;
   font-size: 4rem;
+  word-break: break-word;
+  clip-path: inset(0 0 100% 0);
+  opacity: 1;
+}
+.section3 .belows .rightTexts h3 .char {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(40px);
+  will-change: transform, opacity;
 }
 .section3 .belows .rightTexts .desc {
   margin-top: 1.5rem;
   font-family: "Barlow", sans-serif;
   width: 70%;
+  opacity: 0;
+  transform: translateY(20px);
 }
 .section3 .belows .rightTexts .btnLike {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 1rem;
+  opacity: 0;
+  transform: translateY(15px) scale(0.95);
 }
 .section3 .belows .rightTexts .btnLike i {
   background: yellow;
@@ -254,11 +332,15 @@ nav .login:active {
   border-radius: 50%;
   margin-top: -3.2%;
   cursor: pointer;
+  transform: rotate(-20deg) scale(0.8);
+  opacity: 0;
 }
 .section3 .belows .rightTexts .btnLike .btnText {
   font-family: "Barlow", sans-serif;
   font-weight: 500;
   font-size: 1.5rem;
+  opacity: 0;
+  transform: translateX(20px);
 }
 
 .section4 {
@@ -272,6 +354,8 @@ nav .login:active {
   font-size: 4rem;
   font-weight: 800;
   text-transform: uppercase;
+  opacity: 0;
+  transform: translateY(30px);
 }
 .section4 .headerTexts h2:nth-child(2) {
   margin-left: 10rem;
@@ -285,6 +369,19 @@ nav .login:active {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 2rem;
+  opacity: 0;
+  transform: translateY(20px);
+}
+.section4 .images img {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: transform 0.4s ease, filter 0.4s ease;
+  cursor: pointer;
+}
+.section4 .images img:hover {
+  transform: scale(1.08) rotate(1deg);
+  filter: brightness(1.1) saturate(1.2);
+  z-index: 5;
 }
 .section4 .images img:nth-of-type(1) {
   width: 20rem;
@@ -527,4 +624,11 @@ footer .social .icons {
   margin-bottom: 0.8rem;
   display: flex;
   gap: 1.5rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
 }/*# sourceMappingURL=style.css.map */
