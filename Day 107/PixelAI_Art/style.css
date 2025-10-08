@@ -172,6 +172,8 @@ nav .login:active {
   opacity: 0;
   transform: translateY(50px);
   will-change: transform, opacity;
+  overflow-y: hidden;
+  overflow-x: hidden;
 }
 .section2 .left p {
   font-size: 2rem;
@@ -265,6 +267,8 @@ nav .login:active {
   opacity: 1;
   transform-origin: center;
   will-change: clip-path, transform;
+  overflow-y: hidden;
+  overflow-x: hidden;
 }
 .section3 .belows {
   display: flex;
@@ -345,6 +349,8 @@ nav .login:active {
 
 .section4 {
   padding: 3rem;
+  overflow-y: hidden;
+  overflow-x: hidden;
 }
 .section4 .headerTexts {
   margin-bottom: 2.8rem;
@@ -424,6 +430,8 @@ nav .login:active {
   width: 100%;
   margin: 2rem 0;
   padding: 3rem;
+  overflow-y: hidden;
+  overflow-x: hidden;
 }
 .section5 .header {
   display: flex;
@@ -437,11 +445,19 @@ nav .login:active {
   text-transform: uppercase;
   width: 50%;
 }
+.section5 .header h2 span {
+  opacity: 0;
+  transform: translateY(40px);
+  will-change: transform, opacity;
+}
 .section5 .header .right {
   display: flex;
   gap: 2rem;
   align-items: center;
   margin-right: 3.8rem;
+  opacity: 0;
+  transform: translateY(40px);
+  will-change: transform, opacity;
 }
 .section5 .header .right i {
   font-size: 1.5rem;
@@ -458,11 +474,51 @@ nav .login:active {
   display: flex;
   justify-content: space-between;
 }
+.section5 .below .left img,
+.section5 .below .right img {
+  opacity: 0;
+  transform: translateY(60px) scale(1.1) rotateY(6deg);
+  will-change: transform, opacity;
+  cursor: pointer;
+  position: relative;
+}
 .section5 .below .left {
   width: 51%;
 }
+.section5 .below .left .img-wrapper {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  cursor: pointer;
+}
+.section5 .below .left .wave-wrapper {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+.section5 .below .left .wave-wrapper .wave-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+.section5 .below .left .wave-wrapper .wave {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.6);
+  stroke-width: 2;
+  opacity: 0;
+  transform-origin: center;
+}
 .section5 .below .left img {
   width: 45rem;
+  display: block;
+}
+.section5 .below .left .texts {
+  opacity: 0;
+  transform: translateY(30px);
+  will-change: transform, opacity;
 }
 .section5 .below .left .texts h3 {
   font-family: "Roboto", sans-serif;
@@ -482,6 +538,9 @@ nav .login:active {
 }
 .section5 .below .right .texts {
   margin-bottom: 2rem;
+  opacity: 0;
+  transform: translateY(30px);
+  will-change: transform, opacity;
 }
 .section5 .below .right .texts h3 {
   font-family: "Roboto", sans-serif;
@@ -495,8 +554,23 @@ nav .login:active {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-size: 1.2rem;
 }
+.section5 .below .right .img-wrapper {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  cursor: pointer;
+}
 .section5 .below .right img {
   width: 40rem;
+  display: block;
+}
+.section5 .ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  transform: scale(0);
+  pointer-events: none;
+  mix-blend-mode: overlay;
 }
 
 .section6 {
@@ -507,6 +581,8 @@ nav .login:active {
   align-items: center;
   justify-content: center;
   position: relative;
+  overflow-y: hidden;
+  overflow-x: hidden;
 }
 .section6 .container {
   background: #000;
@@ -515,6 +591,8 @@ nav .login:active {
   padding: 1.5rem 2.3rem;
   position: relative;
   overflow: hidden;
+  opacity: 0;
+  transform: translateY(60px);
 }
 .section6 .container .left h3 {
   color: white;
@@ -523,6 +601,12 @@ nav .login:active {
   font-size: 4rem;
   width: 50%;
 }
+.section6 .container .left h3 span.word {
+  opacity: 0;
+  transform: translateY(30px) skewY(5deg);
+  filter: blur(8px);
+  display: inline-block;
+}
 .section6 .container .left .btns {
   display: flex;
   gap: 3rem;
@@ -530,11 +614,16 @@ nav .login:active {
   font-size: 1.3rem;
   margin-top: 3rem;
 }
+.section6 .container .left .btns .btn1,
+.section6 .container .left .btns .btn2 {
+  opacity: 0;
+  transform: scale(0.8) translateY(20px);
+  cursor: pointer;
+}
 .section6 .container .left .btns .btn1 {
   color: black;
   background: white;
   padding: 0.6rem 2rem;
-  cursor: pointer;
 }
 .section6 .container .left .btns .btn1:active {
   transform: scale(0.9);
@@ -543,7 +632,6 @@ nav .login:active {
   border: 2px solid white;
   color: white;
   padding: 0.6rem 2rem;
-  cursor: pointer;
 }
 .section6 .container .left .btns .btn2:active {
   transform: scale(0.9);
@@ -551,25 +639,32 @@ nav .login:active {
 .section6 .container .right {
   position: absolute;
   background: yellow;
-  height: 30rem;
-  width: 30rem;
-  top: 50%;
+  height: 30.5rem;
+  width: 30.5rem;
+  top: -6%;
   right: -13%;
-  transform: translate(0%, -50%);
   border-radius: 50%;
+  opacity: 0;
+  transform: scale(0);
+  will-change: transform, opacity;
 }
 .section6 img {
   width: 24rem;
   position: absolute;
   right: 11.5%;
   bottom: 9%;
-  border-bottom-left-radius: 27.2%;
+  border-bottom-left-radius: 21%;
+  opacity: 0;
+  transform: translate(120px, 80px) rotate(8deg) scale(1.2);
+  will-change: transform, opacity;
 }
 
 .section7 {
   padding: 2rem 17rem 10rem 17rem;
   display: flex;
   gap: 8rem;
+  overflow-y: hidden;
+  overflow-x: hidden;
 }
 .section7 .left h2 {
   font-family: "Oswald", sans-serif;
@@ -613,7 +708,9 @@ footer .model {
   width: 23rem;
   top: -30%;
   left: 47%;
-  transform: translate(-50%);
+  opacity: 0;
+  transform: translate(-50%, 50px) scale(0.9);
+  will-change: transform, opacity;
 }
 footer .social a {
   text-decoration: none;
@@ -624,6 +721,13 @@ footer .social .icons {
   margin-bottom: 0.8rem;
   display: flex;
   gap: 1.5rem;
+}
+footer .header h2,
+footer .header .selec p,
+footer .social .icons a,
+footer .social {
+  opacity: 0;
+  transform: translateY(20px);
 }
 
 @media (prefers-reduced-motion: reduce) {

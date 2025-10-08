@@ -159,6 +159,9 @@ nav {
   width: 98.52%;
   position: relative;
   height: 70vh;
+//   overflow-y: hidden;
+//   overflow-x: hidden;
+  
 
   .modelBg {
     width: 100%;
@@ -188,6 +191,8 @@ nav {
   opacity: 0; // hidden before scroll
   transform: translateY(50px);
   will-change: transform, opacity;
+    overflow-y: hidden;
+  overflow-x: hidden;
 
   .left {
     // width: 50%;
@@ -293,6 +298,8 @@ nav {
     opacity: 1;
     transform-origin: center;
     will-change: clip-path, transform;
+      overflow-y: hidden;
+  overflow-x: hidden;
   }
 
   .belows {
@@ -311,7 +318,7 @@ nav {
         transform: scale(1.08) rotate3d(1, 1, 0, 6deg);
         filter: brightness(1.15) saturate(1.2);
         box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4),
-                    0 0 30px rgba(255, 230, 80, 0.6);
+          0 0 30px rgba(255, 230, 80, 0.6);
       }
     }
     .rightTexts {
@@ -334,19 +341,18 @@ nav {
         clip-path: inset(0 0 100% 0);
         opacity: 1;
 
-
-         .char {
-      display: inline-block;
-      opacity: 0;
-      transform: translateY(40px);
-      will-change: transform, opacity;
-    }
+        .char {
+          display: inline-block;
+          opacity: 0;
+          transform: translateY(40px);
+          will-change: transform, opacity;
+        }
       }
       .desc {
         margin-top: 1.5rem;
         font-family: "Barlow", sans-serif;
         width: 70%;
-                opacity: 0;
+        opacity: 0;
         transform: translateY(20px);
       }
 
@@ -355,7 +361,7 @@ nav {
         flex-direction: row;
         align-items: center;
         gap: 1rem;
-                opacity: 0;
+        opacity: 0;
         transform: translateY(15px) scale(0.95);
 
         i {
@@ -382,6 +388,8 @@ nav {
 
 .section4 {
   padding: 3rem;
+    overflow-y: hidden;
+  overflow-x: hidden;
 
   .headerTexts {
     margin-bottom: 2.8rem;
@@ -406,12 +414,12 @@ nav {
       font-family: "Roboto", sans-serif;
       font-weight: 700;
       font-size: 2rem;
-            opacity: 0; // animate in
+      opacity: 0; // animate in
       transform: translateY(20px);
     }
 
     img {
-        opacity: 0; // hidden for gsap
+      opacity: 0; // hidden for gsap
       transform: scale(0.9);
       transition: transform 0.4s ease, filter 0.4s ease;
       cursor: pointer;
@@ -467,22 +475,34 @@ nav {
   width: 100%;
   margin: 2rem 0;
   padding: 3rem;
+    overflow-y: hidden;
+  overflow-x: hidden;
   .header {
     display: flex;
     justify-content: space-between;
     margin-bottom: 1rem;
+
     h2 {
       font-family: "Roboto", sans-serif;
       font-size: 5rem;
       font-weight: 800;
       text-transform: uppercase;
       width: 50%;
+
+      span {
+        opacity: 0;
+        transform: translateY(40px);
+        will-change: transform, opacity;
+      }
     }
     .right {
       display: flex;
       gap: 2rem;
       align-items: center;
       margin-right: 3.8rem;
+      opacity: 0;
+      transform: translateY(40px);
+      will-change: transform, opacity;
       i {
         font-size: 1.5rem;
         background: rgb(227, 227, 0);
@@ -501,13 +521,56 @@ nav {
     display: flex;
     // align-items: start;
     justify-content: space-between;
+
+    .left img,
+    .right img {
+      opacity: 0;
+      transform: translateY(60px) scale(1.1) rotateY(6deg);
+      will-change: transform, opacity;
+      cursor: pointer;
+      position: relative;
+      //   overflow: hidden;
+    }
     .left {
       width: 51%;
+
+      .img-wrapper {
+        position: relative;
+        display: inline-block;
+        overflow: hidden; // keeps ripple inside the image box
+        cursor: pointer;
+      }
+      .wave-wrapper {
+        position: relative;
+        display: inline-block;
+        overflow: hidden;
+
+        .wave-svg {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          pointer-events: none;
+        }
+
+        .wave {
+          fill: none;
+          stroke: rgba(255, 255, 255, 0.6);
+          stroke-width: 2;
+          opacity: 0;
+          transform-origin: center;
+        }
+      }
       img {
         width: 45rem;
+        display: block;
       }
 
       .texts {
+        opacity: 0;
+        transform: translateY(30px);
+        will-change: transform, opacity;
         h3 {
           font-family: "Roboto", sans-serif;
           font-size: 4rem;
@@ -531,6 +594,9 @@ nav {
 
       .texts {
         margin-bottom: 2rem;
+        opacity: 0;
+        transform: translateY(30px);
+        will-change: transform, opacity;
         h3 {
           font-family: "Roboto", sans-serif;
           font-weight: 800;
@@ -546,10 +612,27 @@ nav {
         }
       }
 
+      .img-wrapper {
+        position: relative;
+        display: inline-block;
+        overflow: hidden; // keeps ripple inside the image box
+        cursor: pointer;
+      }
+
       img {
         width: 40rem;
+        display: block;
       }
     }
+  }
+
+  .ripple {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.4);
+    transform: scale(0);
+    pointer-events: none;
+    mix-blend-mode: overlay;
   }
 }
 
@@ -561,6 +644,8 @@ nav {
   align-items: center;
   justify-content: center;
   position: relative;
+    overflow-y: hidden;
+  overflow-x: hidden;
 
   .container {
     background: #000;
@@ -569,6 +654,8 @@ nav {
     padding: 1.5rem 2.3rem;
     position: relative;
     overflow: hidden;
+    opacity: 0;
+    transform: translateY(60px);
 
     .left {
       h3 {
@@ -577,6 +664,13 @@ nav {
         text-transform: uppercase;
         font-size: 4rem;
         width: 50%;
+
+        span.word {
+          opacity: 0;
+          transform: translateY(30px) skewY(5deg);
+          filter: blur(8px);
+          display: inline-block; // important so transforms apply
+        }
       }
 
       .btns {
@@ -586,11 +680,18 @@ nav {
         font-size: 1.3rem;
         margin-top: 3rem;
 
+        .btn1,
+        .btn2 {
+          opacity: 0;
+          transform: scale(0.8) translateY(20px);
+          cursor: pointer;
+
+        }
+
         .btn1 {
           color: black;
           background: white;
           padding: 0.6rem 2rem;
-          cursor: pointer;
 
           &:active {
             transform: scale(0.9);
@@ -601,7 +702,6 @@ nav {
           border: 2px solid white;
           color: white;
           padding: 0.6rem 2rem;
-          cursor: pointer;
 
           &:active {
             transform: scale(0.9);
@@ -613,12 +713,15 @@ nav {
     .right {
       position: absolute;
       background: yellow;
-      height: 30rem;
-      width: 30rem;
-      top: 50%;
+      height: 30.5rem;
+      width: 30.5rem;
+      top: -6%;
       right: -13%;
-      transform: translate(0%, -50%);
+    //   transform: translate(0%, -50%);
       border-radius: 50%;
+      opacity: 0;
+    transform: scale(0);
+    will-change: transform, opacity;
     }
   }
   img {
@@ -626,7 +729,10 @@ nav {
     position: absolute;
     right: 11.5%;
     bottom: 9%;
-    border-bottom-left-radius: 27.2%;
+    border-bottom-left-radius: 21%;
+    opacity: 0;
+    transform: translate(120px, 80px) rotate(8deg) scale(1.2);
+    will-change: transform, opacity;
   }
 }
 
@@ -634,6 +740,8 @@ nav {
   padding: 2rem 17rem 10rem 17rem;
   display: flex;
   gap: 8rem;
+    overflow-y: hidden;
+  overflow-x: hidden;
 
   .left {
     h2 {
@@ -684,7 +792,10 @@ footer {
     width: 23rem;
     top: -30%;
     left: 47%;
-    transform: translate(-50%);
+    // transform: translate(-50%);
+    opacity: 0;
+    transform: translate(-50%, 50px) scale(0.9);
+    will-change: transform, opacity;
   }
 
   .social {
@@ -699,6 +810,11 @@ footer {
       gap: 1.5rem;
     }
   }
+
+  .header h2, 
+  .header .selec p,
+  .social .icons a,
+  .social { opacity: 0; transform: translateY(20px); }
 }
 
 @media (prefers-reduced-motion: reduce) {

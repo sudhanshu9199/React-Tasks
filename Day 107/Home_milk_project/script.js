@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
   );
   // gsap code here!
   gsap.from(bottle1, {
-    duration: 2.2,
+    duration: 3.1,
     opacity: 0,
     scale: 3.8,
     y: 100,
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
   });
 
   gsap.from(bottle2, {
-  duration: 2,
+  duration: 2.8,
   opacity: 0,
   rotate: 15,
   scale: 0.7,
@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 gsap.from([coconutTwoPieces, coconutPiece], {
   y: -300,
   opacity: 0,
-  duration: 1.9,
+  duration: 2.2,
   stagger: 0.5,
   ease: "bounce.out"
 });
@@ -80,8 +80,7 @@ gsap.from([coconutTwoPieces, coconutPiece], {
     ease: "power3.out",
   });
 
-});
-
+});2.8
 
 document.querySelectorAll(".milkBottle").forEach(el => {
   el.addEventListener("mouseenter", () => {
